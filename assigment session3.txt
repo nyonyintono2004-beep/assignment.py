@@ -1,0 +1,53 @@
+Here is a simple **Python** program that follows all your requirements:
+
+* The price is hard-coded (`price = 6700`)
+* Uses only arithmetic operators (`+ - // * %`)
+* Uses the required variables: `coin100`, `coin200`, `coin500`, `coin1000`
+* Prints output in the required format
+
+```python
+# Hard-coded price
+price = 6700
+
+# Assume customer paid 10000 shillings
+paid = 10000
+
+# Calculate change
+change = paid - price
+
+# Calculate number of coins using arithmetic operators only
+coin1000 = change // 1000
+change = change % 1000
+
+coin500 = change // 500
+change = change % 500
+
+coin200 = change // 200
+change = change % 200
+
+coin100 = change // 100
+change = change % 100
+
+# Output
+print("The price of your item is", price, "shillings, and your change is", paid - price, "shillings.")
+print("Here's the change that uses the fewest coins:\n")
+
+print("1000 shillings:", coin1000)
+print("500 shillings:", coin500)
+print("200 shillings:", coin200)
+print("100 shillings:", coin100)
+```
+
+### ✅ Output (for price = 6700)
+
+```
+The price of your item is 6700 shillings, and your change is 3300 shillings.
+Here's the change that uses the fewest coins:
+
+1000 shillings: 3
+500 shillings: 0
+200 shillings: 1
+100 shillings: 1
+```
+
+If you'd like, I can also show a version where the paid amount is automatically rounded up to the nearest 1000 instead of being fixed at 10000.
